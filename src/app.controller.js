@@ -14,6 +14,7 @@ const bootstrap = () => {
   app.get("/", (req, res) => res.status(200).json("Hello On Saraha App"));
 
   checkConnectionDB();
+  app.use("/uploads", express.static("uploads")); 
   app.use("/users", userRouter);
 
   app.use("{/*demo}", (req, res, next) => {

@@ -17,8 +17,7 @@ const userSchema = new mongoose.Schema(
       type: String,
       required: true,
       minLength: 3,
-      trim: true,
-    },
+     },
     email: {
       type: String,
       required: true,
@@ -59,6 +58,7 @@ const userSchema = new mongoose.Schema(
       default:0
     },
     profilePicture: String,
+    coverPicture: [String],
   },
   {
     timestamps: true,

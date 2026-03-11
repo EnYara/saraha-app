@@ -64,3 +64,7 @@ export const find = async ({ model, filter = {}, options = {} } = {}) => {
 export const findById = async ({ model, id, select = "" } = {}) => {  
   return await model.findById(id).select(select);
 }
+
+export const findOneAndUpdate = async ({ model, filter, update, options = {} }) => {
+  return await model.findOneAndUpdate(filter, update, { new: true, ...options });
+};

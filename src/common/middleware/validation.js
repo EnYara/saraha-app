@@ -8,7 +8,7 @@ export const validation = (schema) => {
 
     for (const key of Object.keys(schema)) {
       const { error } = schema[key].validate(req[key], { abortEarly: false });
-      console.log(error);
+      console.log(error?.details);
 
       if (error) {
         error.details.forEach((element) => {

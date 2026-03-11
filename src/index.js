@@ -9,3 +9,7 @@ dotenv.default.config({
 const { default: bootstrap } = await import("./app.controller.js");
 
 bootstrap();
+
+//dqybjvfii
+//api key 929466659747168
+//secret EaFI5zqbCeKBs41JSHb5HlNT2DE
