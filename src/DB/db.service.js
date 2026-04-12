@@ -40,11 +40,6 @@ export const updateOneAndUpdate = async ({
   return await doc.exec();
 };
 
-export const deleteOne = async ({ model, filter = {}, options = {} } = {}) => {
-  const doc = model.deleteOne(filter, options);
-  return await doc.exec();
-};
-
 export const find = async ({ model, filter = {}, options = {} } = {}) => {
   const doc = model.find(filter);
   if (options.populate) {
@@ -67,4 +62,14 @@ export const findById = async ({ model, id, select = "" } = {}) => {
 
 export const findOneAndUpdate = async ({ model, filter, update, options = {} }) => {
   return await model.findOneAndUpdate(filter, update, { new: true, ...options });
+};
+
+export const deleteOne = async ({ model, filter = {}, options = {} } = {}) => {
+  const doc = model.deleteOne(filter, options);
+  return await doc.exec();
+};
+
+
+export const deleteMany = async ({ model, filter = {}, options = {} } = {}) => {
+  return await model.deleteMany(filter, options);
 };

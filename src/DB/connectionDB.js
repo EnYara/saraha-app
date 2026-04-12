@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
-import {Db_URI} from "../../config/config.service.js";
+import {DB_URL} from "../../config/config.service.js";
 
-console.log("DB URI:", process.env.DB_URI);
+console.log("DB URL:", process.env.DB_URL);
 const checkConnectionDB = async() => {
-  await mongoose.connect(Db_URI,{serverSelectionTimeoutMS:5000})
+  await mongoose.connect(DB_URL,{serverSelectionTimeoutMS:5000})
   .then(()=> {
     console.log("DB connected sucessfully ");
   })
