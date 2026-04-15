@@ -3,8 +3,6 @@ import bootstrap  from '../src/app.controller.js';
 
 bootstrap();
 
-
-
 // sendEmail();
 //dqybjvfii
 //api key 929466659747168

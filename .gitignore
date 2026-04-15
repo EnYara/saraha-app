@@ -1,7 +1,3 @@
-config/.env.development
-config/.env.production
-social-login
-node_modules
-
-.env
-config/.env.*
+/node_modules
+/config/.env.*
+/uploads

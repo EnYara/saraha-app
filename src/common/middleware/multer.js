@@ -18,7 +18,6 @@ export const multer_local = ({custom_path= "General" ,custom_types =[]}={}) => {
   });
 
   function fileFilter (req, file, cb) {
-    console.log(file,"before filter");
     
     if (!custom_types.includes(file.mimetype)) {
       cb(new Error('invalid file type'));
@@ -43,7 +42,6 @@ export const multer_host = (custom_types =[]) => {
   });
 
    function fileFilter (req, file, cb) {
-    console.log(file,"before filter");
     
     if (!custom_types.includes(file.mimetype)) {
       cb(new Error('invalid file type'));
