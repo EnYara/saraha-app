@@ -25,12 +25,10 @@ const bootstrap = async () => {
     // legacyHeaders: false,
     // skipSuccessfulRequests: true,
     // skipFailedRequests: false,
-    // keyGenerator: (req, res) => {
-    //   return req.ip;
-    // }
+    // keyGenerator
   });
   
-  
+
   const corsOptions = {
     origin: function (origin, callback) {
       if ([...WhiteList, undefined].indexOf(origin) !== -1 || !origin) {
@@ -50,7 +48,7 @@ const bootstrap = async () => {
     express.json());
 
   //home route
-  app.get("/", (req, res) => res.status(200).json("Hello On Saraha App"));
+  app.get("/", (req, res, next) => {res.status(200).json("Hello On Saraha App");})
 
   //db connection
   checkConnectionDB();
